@@ -8,36 +8,47 @@ export default function Cart() {
     setCartItems(storedCart);
   }, []);
 
+  const updateCart = (newCart) => {
+    setCartItems(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart));
+  };
+
   const removeItem = (id) => {
-    const updatedCart = cartItems.filter((item) => item.id !== id);
-    setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    updateCart(cartItems.filter((item) => item.id !== id));
   };
 
   const increaseQuantity = (id) => {
-    const updatedCart = cartItems.map((item) =>
-      item.id === id ? { ...item, quantity: (item.quantity || 1) + 1 } : item
+    updateCart(
+      cartItems.map((item) =>
+        item.id === id
+          ? { ...item, quantity: (item.quantity || 1) + 1 }
+          : item
+      )
     );
-    setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   const decreaseQuantity = (id) => {
-    const updatedCart = cartItems
-      .map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max((item.quantity || 1) - 1, 1) }
-          : item
-      )
-      .filter((item) => item.quantity > 0);
-    setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    updateCart(
+      cartItems
+        .map((item) =>
+          item.id === id
+            ? { ...item, quantity: Math.max((item.quantity || 1) - 1, 1) }
+            : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
   };
 
   const subtotal = cartItems.reduce(
-    (total, item) => total + item.price * (item.quantity || 1),
+    (total, item) => total + (item.price || 0) * (item.quantity || 1),
     0
   );
+
+  const formatCurrency = (amount) =>
+    new Intl.NumberFormat("en-PH", {
+      style: "currency",
+      currency: "PHP",
+    }).format(amount);
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -54,6 +65,7 @@ export default function Cart() {
                   key={item.id}
                   className="flex items-center justify-between border-b pb-4"
                 >
+                  {/* IMAGE + INFO */}
                   <div className="flex items-center space-x-4">
                     <img
                       src={item.image}
@@ -62,21 +74,26 @@ export default function Cart() {
                     />
                     <div>
                       <h2 className="font-semibold">{item.name}</h2>
-                      <p className="text-gray-600">₱{item.price}</p>
+                      <p className="text-gray-600">
+                        {formatCurrency(item.price)}
+                      </p>
                     </div>
                   </div>
 
+                  {/* ACTIONS */}
                   <div className="flex items-center space-x-4">
                     <button
                       onClick={() => decreaseQuantity(item.id)}
-                      className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                      className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
                     >
-                      -
+                      −
                     </button>
-                    <span>{item.quantity}</span>
+                    <span className="min-w-[24px] text-center">
+                      {item.quantity || 1}
+                    </span>
                     <button
                       onClick={() => increaseQuantity(item.id)}
-                      className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                      className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300"
                     >
                       +
                     </button>
@@ -91,9 +108,13 @@ export default function Cart() {
               ))}
             </div>
 
+            {/* FOOTER */}
             <div className="mt-6 text-right">
               <p className="text-lg font-bold">
-                Subtotal: <span className="text-red-600">₱{subtotal}</span>
+                Subtotal:{" "}
+                <span className="text-red-600">
+                  {formatCurrency(subtotal)}
+                </span>
               </p>
               <button className="mt-4 bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">
                 Checkout

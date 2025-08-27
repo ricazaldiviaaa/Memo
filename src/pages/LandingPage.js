@@ -187,21 +187,80 @@ export default function LandingPage() {
       Each piece is thoughtfully designed to inspire calm, beauty, and a sense of connection in your daily life.
     </p>
 
-    {/* Feature Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-      {[
-        {icon: "🎨", title: "Handcrafted Quality", desc: "Every item is carefully handmade with attention to detail and love."},
-        {icon: "✨", title: "Unique Designs", desc: "Original designs that bring beauty, meaning, and joy to your space."},
-        {icon: "📸", title: "Memories Preserved", desc: "Create keepsakes that capture moments and make them unforgettable."},
-        {icon: "🌱", title: "Sustainable Materials", desc: "We use eco-friendly materials to craft products that care for the planet."},
-      ].map((item, idx) => (
-        <div key={idx} className="bg-white rounded-2xl shadow-md p-8 hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-stone-50">
-          <div className="text-4xl mb-4">{item.icon}</div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-          <p className="text-gray-600 text-sm">{item.desc}</p>
-        </div>
-      ))}
+{/* Feature Cards */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+  {[
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" 
+          className="h-10 w-10 text-red-600" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor" 
+          strokeWidth={1.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 8.25H9m12 3.75A9 9 0 1 1 3 12a9 9 0 0 1 18 0z" />
+        </svg>
+      ),
+      title: "Handcrafted Quality",
+      desc: "Every item is carefully handmade with attention to detail and love.",
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" 
+          className="h-10 w-10 text-red-600" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor" 
+          strokeWidth={1.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 17.25l-3.5 2.25 1-4.25-3.25-2.75 4.25-.25L12 8.5l1.5 3.75 4.25.25-3.25 2.75 1 4.25-3.5-2.25z" />
+        </svg>
+      ),
+      title: "Unique Designs",
+      desc: "Original designs that bring beauty, meaning, and joy to your space.",
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" 
+          className="h-10 w-10 text-red-600" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor" 
+          strokeWidth={1.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 5h18M3 12h18M3 19h18" />
+        </svg>
+      ),
+      title: "Memories Preserved",
+      desc: "Create keepsakes that capture moments and make them unforgettable.",
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" 
+          className="h-10 w-10 text-red-600" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor" 
+          strokeWidth={1.5}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m9-9H3" />
+        </svg>
+      ),
+      title: "Sustainable Materials",
+      desc: "We use eco-friendly materials to craft products that care for the planet.",
+    },
+  ].map((item, idx) => (
+    <div
+      key={idx}
+      className="bg-white rounded-2xl shadow-md p-8 hover:shadow-2xl transition transform hover:-translate-y-2 hover:bg-stone-50"
+    >
+      <div className="mb-4">{item.icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+      <p className="text-gray-600 text-sm">{item.desc}</p>
     </div>
+  ))}
+</div>
   </div>
 </section>
 
@@ -249,7 +308,7 @@ export default function LandingPage() {
   </div>
 
   {/* Bottom row: actual phone number */}
-  <p className="text-stone-600 text-sm">+1 (555) 123-4567</p>
+  <p className="text-stone-600 text-sm">(+63)917-374-7475</p>
 </div>
 
           <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-5">
@@ -260,7 +319,7 @@ export default function LandingPage() {
   </div>
 
   {/* Bottom row: actual address */}
-  <p className="text-stone-600 text-sm">123 Main Street, City</p>
+  <p className="text-stone-600 text-sm">Unit O, Gold Commercial Complex, Aguinaldo Highway, Anabu I-A,, Imus, Philippines, 4103</p>
 </div>
 
           <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-5">
@@ -280,7 +339,7 @@ export default function LandingPage() {
   <a href="#" className="text-black hover:text-stone-900">
     <Instagram size={24} />
   </a>
-  <a href="#" className="text-black hover:text-stone-900">
+  <a href="https://www.facebook.com/KeepsakesAndMemories.PH" className="text-black hover:text-stone-900">
     <Facebook size={24} />
   </a>
 </div>
@@ -317,15 +376,17 @@ export default function LandingPage() {
       </div>
     </div>
 
-    {/* Bottom: Map */}
-    <div className="w-full h-64 rounded-2xl overflow-hidden shadow-md">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019530514988!2d-122.41941518468182!3d37.77492977975925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5f3f94bf%3A0x6e57a74a7ff1d2c3!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2s!4v1692619012345!5m2!1sen!2s"
-        className="w-full h-full border-0"
-        allowFullScreen=""
-        loading="lazy"
-      ></iframe>
-    </div>
+{/* Bottom: Map */}
+<div className="w-full h-64 rounded-2xl overflow-hidden shadow-md">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.187305291503!2d120.94074141532779!3d14.40145988624674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c0f7c04c3a6b%3A0x1234567890abcdef!2sUnit%20O%2C%20Gold%20Commercial%20Complex%2C%20Aguinaldo%20Highway%2C%20Anabu%20I-A%2C%20Imus%2C%20Philippines%204103!5e0!3m2!1sen!2sph!4v1692960000000!5m2!1sen!2sph"
+    className="w-full h-full border-0"
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
 
   </div>
 
@@ -341,15 +402,16 @@ export default function LandingPage() {
 </section>
 
 
-      {/* Back to Top Button */}
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition transform hover:scale-110"
-        >
-          <ArrowUp size={20} />
-        </button>
-      )}
+{/* Back to Top Button */}
+{showButton && (
+  <button
+    onClick={scrollToTop}
+    className="fixed bottom-6 right-6 z-40 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition transform hover:scale-110"
+  >
+    <ArrowUp size={20} />
+  </button>
+)}
+
     </div>
   );
 }
