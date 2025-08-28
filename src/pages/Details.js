@@ -212,6 +212,7 @@ export default function Details() {
         </div>
       </div>
 
+      
 {/* Recommendations */}
 <div className="max-w-6xl mx-auto mt-14">
   <h2 className="text-lg font-semibold text-gray-800 mb-6">
