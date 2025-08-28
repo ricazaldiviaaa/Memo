@@ -85,6 +85,27 @@ const handleSend = () => {
       ];
     } 
 
+        // best seller
+    else if (userMessage.includes("best seller") || userMessage.includes("best sellers")  || userMessage.includes("bestseller") || userMessage.includes("bestsellers")) {
+      botReplies = [
+        { type: "text", text: "🏆 Best Sellers:" },
+        { type: "text", text: "1. Aroma Diffuser — ₱400" },
+        { type: "text", text: "2. Coffee Scrub — ₱200" },
+        { type: "text", text: "3. Local Honey — ₱220" }
+      ];
+    }
+
+    // recommendations
+    else if (userMessage.includes("recommend") || userMessage.includes("recommendation") || userMessage.includes("recommendations")  || userMessage.includes("reco") || userMessage.includes("recommends")) {
+      botReplies = [
+        { type: "text", text: "🤔 Looking for a recommendation?" },
+        { type: "text", text: "✨ For relaxation: Aroma Diffuser" },
+        { type: "text", text: "☕ For skincare: Coffee Scrub" },
+        { type: "text", text: "🍯 For food lovers: Local Honey" }
+      ];
+    }
+
+  
     // categories
     else if (userMessage.includes("category") || userMessage.includes("categories")) {
       botReplies = [
@@ -98,7 +119,7 @@ const handleSend = () => {
     } 
 
     // products
-    else if (userMessage.includes("products") || userMessage.includes("items")) {
+    else if (userMessage.includes("products") || userMessage.includes("product") || userMessage.includes("item") || userMessage.includes("lists") || userMessage.includes("list") || userMessage.includes("items")) {
       botReplies = [
         { type: "text", text: "🛍️ Products:" },
         { type: "text", text: "1. Aroma Diffuser — ₱400\n   A calming diffuser" },
@@ -111,14 +132,14 @@ const handleSend = () => {
     }
 
     // product details
-    else if (userMessage.includes("diffuser")) {
+    else if (userMessage.includes("diffuser") || userMessage.includes("diffusers") || userMessage.includes("aroma diffuser")) {
       botReplies = [
         { type: "text", text: "🌿 Aroma Diffuser — ₱400" },
         { type: "text", text: "Category: Aromas" },
         { type: "text", text: "Description: A calming diffuser" },
         { type: "text", text: "Variations: • Lavender • Lemon • Mint" }
       ];
-    } else if (userMessage.includes("coffee scrub")) {
+    } else if (userMessage.includes("coffee scrub") || userMessage.includes("scrub") || userMessage.includes("scrubs")) {
       botReplies = [
         { type: "text", text: "☕ Coffee Scrub — ₱200" },
         { type: "text", text: "Category: Wellness" },
@@ -173,7 +194,7 @@ const handleSend = () => {
     }
 
     // expo / events
-    else if (userMessage.includes("expo") || userMessage.includes("event")) {
+    else if (userMessage.includes("expo") || userMessage.includes("event") || userMessage.includes("events") || userMessage.includes("books") || userMessage.includes("book")) {
       botReplies = [
         { type: "text", text: "🎪 Expos & Events:" },
         { type: "link", text: "Email: info@yourcompany.com", href: "mailto:info@yourcompany.com" },
