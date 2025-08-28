@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowUp, Home } from "lucide-react"; // icon for button
-import SouvenirCard from "../components/SouvinerCard";
-import souvenirs from "../data/souviners";
+import SouvenirCard from "../components/SouvenirCard";
+import souvenirs from "../data/souvenirs";
 import { Twitter, Instagram, Facebook } from "lucide-react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import Homephoto1 from "../assets/Homephoto.png";                                     

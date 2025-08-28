@@ -22,6 +22,10 @@ const souvenirs = [
     price: 200,
     image: CoffeeScrubImg,
     category: "Wellness",
+    variations: [
+      { name: "Solo", description: "Perfect for individual skincare." },
+      { name: "Set", description: "Bundle with multiple packs for sharing." },
+    ],
   },
   {
     id: 2,
@@ -30,6 +34,11 @@ const souvenirs = [
     price: 350,
     image: CoffeeImg,
     category: "Flavors",
+    variations: [
+      { name: "250g", description: "Perfect for a few brews." },
+      { name: "500g", description: "Best value for regular coffee lovers." },
+      { name: "1kg", description: "For true coffee enthusiasts." },
+    ],
   },
   {
     id: 3,
@@ -38,6 +47,10 @@ const souvenirs = [
     price: 220,
     image: HoneyImg,
     category: "Flavors",
+    variations: [
+      { name: "250ml", description: "Sweet little jar for gifts." },
+      { name: "500ml", description: "A family-sized jar." },
+    ],
   },
   {
     id: 4,
@@ -46,6 +59,10 @@ const souvenirs = [
     price: 400,
     image: TampipiImg,
     category: "Crafts",
+    variations: [
+      { name: "Small", description: "Compact and handy size." },
+      { name: "Large", description: "Spacious and decorative." },
+    ],
   },
   {
     id: 5,
@@ -54,6 +71,11 @@ const souvenirs = [
     price: 400,
     image: DiffuserImg,
     category: "Aromas",
+    variations: [
+      { name: "Lavender", description: "Relaxing lavender scent." },
+      { name: "Lemon", description: "Refreshing citrus aroma." },
+      { name: "Mint", description: "Cool and energizing." },
+    ],
   },
   {
     id: 6,
@@ -62,6 +84,10 @@ const souvenirs = [
     price: 250,
     image: LinenImg,
     category: "Aromas",
+    variations: [
+      { name: "Lavender", description: "Calming and soothing." },
+      { name: "Eucalyptus", description: "Fresh and clean scent." },
+    ],
   },
 ];
 
