@@ -1,9 +1,11 @@
 // src/pages/Cart.js
 import React, { useEffect, useState } from "react";
 import { Trash2, Plus, Minus, ShoppingCart } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -130,9 +132,12 @@ export default function Cart() {
                 Subtotal:{" "}
                 <span className="text-red-600">{formatCurrency(subtotal)}</span>
               </p>
-              <button className="bg-red-600 text-white px-6 py-3 rounded-lg font-medium shadow hover:bg-red-700 transition">
-                Proceed to Checkout
-              </button>
+                <button
+                  onClick={() => navigate("/payment")}  // ⬅️ redirect to Payment.js
+                  className="bg-red-600 text-white px-6 py-3 rounded-lg font-medium shadow hover:bg-red-700 transition"
+                >
+                  Proceed to Checkout
+                </button>
             </div>
           </>
         )}

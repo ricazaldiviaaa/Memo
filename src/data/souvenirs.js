@@ -2,17 +2,37 @@
 
 // Wellness
 import CoffeeScrubImg from "../assets/Wellness/CoffeeScrub.jpg";
+import CoffeeScrub1 from "../assets/Wellness/CoffeeScrub1.jpg";
+import CoffeeScrub2 from "../assets/Wellness/CoffeeScrub2.jpg";
+import CoffeeScrub3 from "../assets/Wellness/CoffeeScrub3.jpg";
 
 // Flavors
 import CoffeeImg from "../assets/Flavor/coffee.jpg";
+import Coffee1 from "../assets/Flavor/coffee1.jpg";
+import Coffee2 from "../assets/Flavor/coffee2.jpg";
+import Coffee3 from "../assets/Flavor/coffee3.jpg";
+
 import HoneyImg from "../assets/Flavor/Honey.jpg";
+import Honey1 from "../assets/Flavor/Honey1.jpg";
+import Honey2 from "../assets/Flavor/Honey2.jpg";
+import Honey3 from "../assets/Flavor/Honey3.jpg";
 
 // Crafts
 import TampipiImg from "../assets/Crafts/Tampipi.jpg";
+import Tampipi1 from "../assets/Crafts/Tampipi1.jpg";
+import Tampipi2 from "../assets/Crafts/Tampipi2.jpg";
+import Tampipi3 from "../assets/Crafts/Tampipi3.jpg";
 
 // Aroma
 import DiffuserImg from "../assets/Aroma/Diffuser.jpg";
+import Diffuser1 from "../assets/Aroma/Diffuser1.jpg";
+import Diffuser2 from "../assets/Aroma/Diffuser2.jpg";
+import Diffuser3 from "../assets/Aroma/Diffuser3.jpg";
+
 import LinenImg from "../assets/Aroma/Linen.jpg";
+import Linen1 from "../assets/Aroma/Linen1.jpg";
+import Linen2 from "../assets/Aroma/Linen2.jpg";
+import Linen3 from "../assets/Aroma/Linen3.jpg";
 
 const souvenirs = [
   {
@@ -22,6 +42,7 @@ const souvenirs = [
     price: 200,
     image: CoffeeScrubImg,
     category: "Wellness",
+    gallery: [CoffeeScrub1, CoffeeScrub2, CoffeeScrub3],
     variations: [
       { name: "Solo", description: "Perfect for individual skincare." },
       { name: "Set", description: "Bundle with multiple packs for sharing." },
@@ -34,6 +55,7 @@ const souvenirs = [
     price: 350,
     image: CoffeeImg,
     category: "Flavors",
+    gallery: [Coffee1, Coffee2, Coffee3],
     variations: [
       { name: "250g", description: "Perfect for a few brews." },
       { name: "500g", description: "Best value for regular coffee lovers." },
@@ -47,6 +69,7 @@ const souvenirs = [
     price: 220,
     image: HoneyImg,
     category: "Flavors",
+    gallery: [Honey1, Honey2, Honey3],
     variations: [
       { name: "250ml", description: "Sweet little jar for gifts." },
       { name: "500ml", description: "A family-sized jar." },
@@ -59,6 +82,7 @@ const souvenirs = [
     price: 400,
     image: TampipiImg,
     category: "Crafts",
+    gallery: [Tampipi1, Tampipi2, Tampipi3],
     variations: [
       { name: "Small", description: "Compact and handy size." },
       { name: "Large", description: "Spacious and decorative." },
@@ -71,6 +95,7 @@ const souvenirs = [
     price: 400,
     image: DiffuserImg,
     category: "Aromas",
+    gallery: [Diffuser1, Diffuser2, Diffuser3],
     variations: [
       { name: "Lavender", description: "Relaxing lavender scent." },
       { name: "Lemon", description: "Refreshing citrus aroma." },
@@ -84,6 +109,7 @@ const souvenirs = [
     price: 250,
     image: LinenImg,
     category: "Aromas",
+    gallery: [Linen1, Linen2, Linen3],
     variations: [
       { name: "Lavender", description: "Calming and soothing." },
       { name: "Eucalyptus", description: "Fresh and clean scent." },

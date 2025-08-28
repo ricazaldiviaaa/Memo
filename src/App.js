@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Details from "./pages/Details";
+import Payment from "./pages/Payment";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/details/:id" element={<Details />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
       </MainLayout>
     </Router>

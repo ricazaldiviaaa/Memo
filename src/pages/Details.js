@@ -26,8 +26,10 @@ export default function Details() {
     );
   }
 
-  const gallery = [product.image, product.image, product.image];
+  // ✅ Dynamic gallery
+  const gallery = [product.image, ...(product.gallery || [])];
   const mainImage = gallery[currentIndex];
+
 
   const nextImage = () =>
     setCurrentIndex((prev) => (prev + 1) % gallery.length);
