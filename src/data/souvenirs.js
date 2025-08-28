@@ -1,38 +1,39 @@
 // src/data/souvenirs.js
 
 // Wellness
-import CoffeeScrubImg from "../assets/Wellness/CoffeeScrub.jpg";
-import CoffeeScrub1 from "../assets/Wellness/CoffeeScrub1.jpg";
-import CoffeeScrub2 from "../assets/Wellness/CoffeeScrub2.jpg";
-import CoffeeScrub3 from "../assets/Wellness/CoffeeScrub3.jpg";
+import CoffeeScrubImg from "../assets/wellness/coffeescrub.jpg";
+import CoffeeScrub1 from "../assets/wellness/coffeescrub1.jpg";
+import CoffeeScrub2 from "../assets/wellness/coffeescrub2.jpg";
+import CoffeeScrub3 from "../assets/wellness/coffeescrub3.jpg";
 
 // Flavors
-import CoffeeImg from "../assets/Flavor/coffee.jpg";
-import Coffee1 from "../assets/Flavor/coffee1.jpg";
-import Coffee2 from "../assets/Flavor/coffee2.jpg";
-import Coffee3 from "../assets/Flavor/coffee3.jpg";
+import CoffeeImg from "../assets/flavor/coffee.jpg";
+import Coffee1 from "../assets/flavor/coffee1.jpg";
+import Coffee2 from "../assets/flavor/coffee2.jpg";
+import Coffee3 from "../assets/flavor/coffee3.jpg";
 
-import HoneyImg from "../assets/Flavor/Honey.jpg";
-import Honey1 from "../assets/Flavor/Honey1.jpg";
-import Honey2 from "../assets/Flavor/Honey2.jpg";
-import Honey3 from "../assets/Flavor/Honey3.jpg";
+import HoneyImg from "../assets/flavor/honey.jpg";
+import Honey1 from "../assets/flavor/honey1.jpg";
+import Honey2 from "../assets/flavor/honey2.jpg";
+import Honey3 from "../assets/flavor/honey3.jpg";
 
 // Crafts
-import TampipiImg from "../assets/Crafts/Tampipi.jpg";
-import Tampipi1 from "../assets/Crafts/Tampipi1.jpg";
-import Tampipi2 from "../assets/Crafts/Tampipi2.jpg";
-import Tampipi3 from "../assets/Crafts/Tampipi3.jpg";
+import TampipiImg from "../assets/crafts/tampipi.jpg";
+import Tampipi1 from "../assets/crafts/tampipi1.jpg";
+import Tampipi2 from "../assets/crafts/tampipi2.jpg";
+import Tampipi3 from "../assets/crafts/tampipi3.jpg";
 
 // Aroma
-import DiffuserImg from "../assets/Aroma/Diffuser.jpg";
-import Diffuser1 from "../assets/Aroma/Diffuser1.jpg";
-import Diffuser2 from "../assets/Aroma/Diffuser2.jpg";
-import Diffuser3 from "../assets/Aroma/Diffuser3.jpg";
+import DiffuserImg from "../assets/aroma/diffuser.jpg";
+import Diffuser1 from "../assets/aroma/diffuser1.jpg";
+import Diffuser2 from "../assets/aroma/diffuser2.jpg";
+import Diffuser3 from "../assets/aroma/diffuser3.jpg";
 
-import LinenImg from "../assets/Aroma/Linen.jpg";
-import Linen1 from "../assets/Aroma/Linen1.jpg";
-import Linen2 from "../assets/Aroma/Linen2.jpg";
-import Linen3 from "../assets/Aroma/Linen3.jpg";
+import LinenImg from "../assets/aroma/linen.jpg";
+import Linen1 from "../assets/aroma/linen1.jpg";
+import Linen2 from "../assets/aroma/linen2.jpg";
+import Linen3 from "../assets/aroma/linen3.jpg";
+
 
 const souvenirs = [
   {
